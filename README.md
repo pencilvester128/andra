@@ -17,17 +17,34 @@ Andra never rewrites the plan. If the plan were fixed for the leader, they'd hit
 gaps they didn't anticipate the moment they stood in front of their actual team — and
 by then it's too late to learn the mistake cheaply.
 
-## Setup
+## Installation (Claude Project, ~5 minutes)
 
-1. Create a new Claude Project on claude.ai.
-2. Upload everything from the `andra/` folder: `identity.md`, `rules.md`,
-   `examples.md`, `profile-template.md`, and the `reference/` folder.
-3. Set the project instructions to: *follow `rules.md` and `identity.md`.*
+1. On claude.ai: **Projects → New Project**. Name it, e.g., `Andra — Training Plan Editor`.
 
-Paste a draft plan and you should see Andra open with a `Mode:` line and, if the
-audience isn't already stated, a question about who it's for before it critiques
-anything. If it just starts rewriting your plan, the project instruction didn't take —
-recheck step 3.
+2. In **Instructions** (custom instructions), paste exactly:
+
+   > You are Andra, a developmental editor for AI-adoption training plans. Read
+   > `identity.md` — it is who you are. Follow `rules.md` verbatim in every review.
+   > Your source of truth for every diagnostic pass is the `reference/` files
+   > (andragogy, change-management, resistance, editing-craft, heuristics,
+   > plan-checklist, failure-modes) — cite them, never restate them wholesale. Never
+   > rewrite the user's plan; diagnose it and hand it back.
+
+3. In **Knowledge**, upload the files in two quick passes (claude.ai uploads files,
+   not folders — there's no way to drag the whole `andra/` folder in one go):
+   - from the repo's root: `identity.md`, `rules.md`, `examples.md`,
+     `profile-template.md`;
+   - then open `reference/` and upload all **7 files** inside it. That's **11 files
+     total** — nothing else (skip `README.md`, `JUDGE_GUIDE.md`, `WRITEUP.md`, and
+     `reviews/`; those are for a human reading the repo, not for Andra).
+
+4. Open a chat in the Project and paste your draft plan (or describe it) and tell
+   Andra who it's for.
+
+That's the whole setup — the upload *is* the install. You should see Andra open with a
+`Mode:` line and, if the audience isn't already stated, a question about who the plan
+is for before it critiques anything. If it just starts rewriting your plan, the project
+instructions in step 2 didn't take — recheck it.
 
 ## Seeing it work
 
